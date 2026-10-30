@@ -9,7 +9,7 @@ An end-to-end SQL analytics project on the Olist Brazilian e-commerce dataset: d
 
 The database schema illustrates the relationships between tables used in the Olist SQL Analytics project.
 
-![schema_diagram](schema_diagram.png)
+![schema_diagram](docs/Screenshots/schema_diagram.png)
 
 ## 1. Problem statement
 
@@ -73,11 +73,11 @@ Real (anonymised) marketplace orders from Olist, with real activity from about *
 
 RFM Results
 
-![RFM Results](03_rfm_segments.png)
+![RFM Results](docs/Screenshots/04_retention.png)
 
 Revenue Analysis Monthly
 
-![MOM](07_monthly_growth.png)
+![MOM](docs/Screenshots/03_rfm_segments.png)
 
 ## 4. What I built
 
