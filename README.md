@@ -3,8 +3,13 @@
 An end-to-end SQL analytics project on the Olist Brazilian e-commerce dataset: database design, data loading, cleaning, business analysis, performance tuning, and a reusable reporting layer (views and a stored procedure) ready for a Power BI dashboard.
 
 **Tech:** SQL Server 2025 Express, T-SQL, SSMS | **Dataset:** [Olist Brazilian E-Commerce (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) | **Database:** `OlistRetailDB`, schema `ctr`
-
 ---
+
+## Database Schema
+
+The database schema illustrates the relationships between tables used in the Olist SQL Analytics project.
+
+![schema_diagram](schema_diagram.png)
 
 ## 1. Problem statement
 
@@ -66,6 +71,14 @@ Real (anonymised) marketplace orders from Olist, with real activity from about *
 
 **Sellers.** 2,977 of 3,095 sellers were active. Revenue is highly concentrated: in Bahia, the top seller has 352 orders and 220,199 revenue versus 17,522 for the second.
 
+RFM Results
+
+![RFM Results](03_rfm_segments.png)
+
+Revenue Analysis Monthly
+
+![MOM](07_monthly_growth.png)
+
 ## 4. What I built
 
 | Layer | Objects |
@@ -109,6 +122,8 @@ Method: `SET STATISTICS IO, TIME ON`, actual execution plan, **one change at a t
 
 **Correctness check of the rewrite:** the `ROW_NUMBER` scoring matches `NTILE` bucket sizes to within one row per boundary and moves 44 customers (0.05%) between segments because of tie ordering, with all findings unchanged.
 
+![Tuning](<11_Tuning Summary.png>)
+
 ## 8. Repository structure
 
 ```
@@ -138,6 +153,7 @@ olist-sql-analytics/
 Files 02 and 03 document the load and cleaning as they were done; they are not a one-click rebuild.
 If required .bak file, please contact me via linkedin (Link pasted below)
 
+
 ## 9. Limitations
 
 - The dataset is a 2016-2018 snapshot; no forward-looking claims are made.
@@ -152,6 +168,6 @@ Migrate the database to Azure SQL Database and build a Power BI dashboard on the
 
 ## 11. About
 
-Built by **Sarvesh Sabnis**, SQL Developer (T-SQL, stored procedures, ETL, SQL Server Agent jobs), seeking SQL Developer and Data Analyst roles. 
+Built by **Sarvesh Sabnis**, SQL Developer with experience in SQL Server, PostgreSQL, stored procedures, ETL, and query optimization, building toward Data Engineering.
 [GitHub](https://github.com/The-sabnis)
 [Linkedin](https://www.linkedin.com/in/sarvesh-sabnis-002392242/)
